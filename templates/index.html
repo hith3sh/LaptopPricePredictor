@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>predictor</title>
-    <link rel="icon" type="image/x-icon" href="/static/favico.ico">
+    <link rel="icon" type="image/x-icon" href="/static/favico.ico" />
     <link rel="stylesheet" href="static/style.css" />
-
-
   </head>
   <body>
     <div class="wrapper">
@@ -15,7 +13,7 @@
       <form action="/" method="POST">
         <div class="inputfield">
           <label for="ram"> RAM(GB)</label>
-          <input type="number" class="input" name="ram" required />
+          <input type="number" class="input" name="ram" min="0" required />
         </div>
         <div class="inputfield">
           <label for="weight">Weight (Kg)</label>
@@ -24,6 +22,7 @@
             class="input"
             name="weight"
             step="any"
+            min="0"
             required
           />
         </div>
