@@ -68,8 +68,8 @@ def home():
         pred=prediction(feature_list)*353.54
         pred=np.round(pred[0])
 
-        print("prediction", pred)
-        print('fl', feature_list)
+        print("prediction: LKR", pred)
+        print('feature list:', feature_list)
 
         return render_template("laptop.html",pred=pred)
     else:
