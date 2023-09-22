@@ -8,12 +8,20 @@
     <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
+      <h1> <a href="/"> Home Page </a></h1>
     <div class="wrapper">
       <div class="title">Laptop Price Predictor</div>
       <form action="/" method="POST">
         <div class="inputfield">
           <label for="ram"> RAM(GB)</label>
-          <input type="number" class="input" name="ram" min="0" required />
+          <input
+            type="number"
+            class="input"
+            name="ram"
+            min="0"
+            max="64"
+            required
+          />
         </div>
         <div class="inputfield">
           <label for="weight">Weight (Kg)</label>
@@ -23,6 +31,7 @@
             name="weight"
             step="any"
             min="0"
+            max="4"
             required
           />
         </div>
@@ -121,5 +130,12 @@
         {% endif %}
       </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#0099ff"
+        fill-opacity="1"
+        d="M0,32L17.1,32C34.3,32,69,32,103,32C137.1,32,171,32,206,53.3C240,75,274,117,309,117.3C342.9,117,377,75,411,53.3C445.7,32,480,32,514,26.7C548.6,21,583,11,617,10.7C651.4,11,686,21,720,69.3C754.3,117,789,203,823,218.7C857.1,235,891,181,926,176C960,171,994,213,1029,240C1062.9,267,1097,277,1131,288C1165.7,299,1200,309,1234,293.3C1268.6,277,1303,235,1337,197.3C1371.4,160,1406,128,1423,112L1440,96L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"
+      ></path>
+    </svg>
   </body>
 </html>

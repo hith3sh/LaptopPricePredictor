@@ -7,8 +7,77 @@
 body {
   background: rgb(69, 128, 84);
   padding: 0 10px;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 10px,
+      transparent 10px,
+      transparent 11px
+    ),
+    repeating-linear-gradient(
+      22.5deg,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 10px,
+      transparent 10px,
+      transparent 11px
+    ),
+    linear-gradient(
+      90deg,
+      hsl(194, 74%, 56%),
+      hsl(266, 74%, 56%),
+      hsl(338, 74%, 56%),
+      hsl(50, 74%, 56%),
+      hsl(122, 74%, 56%)
+    );
+  -webkit-animation: AnimationName 59s ease infinite;
+  -moz-animation: AnimationName 59s ease infinite;
+  -o-animation: AnimationName 59s ease infinite;
+  animation: AnimationName 59s ease infinite;
 }
-
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 44%;
+  }
+  50% {
+    background-position: 100% 57%;
+  }
+  100% {
+    background-position: 0% 44%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 44%;
+  }
+  50% {
+    background-position: 100% 57%;
+  }
+  100% {
+    background-position: 0% 44%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 44%;
+  }
+  50% {
+    background-position: 100% 57%;
+  }
+  100% {
+    background-position: 0% 44%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 44%;
+  }
+  50% {
+    background-position: 100% 57%;
+  }
+  100% {
+    background-position: 0% 44%;
+  }
+}
 .wrapper {
   max-width: 500px;
   width: 100%;

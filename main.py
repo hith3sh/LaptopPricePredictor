@@ -3,10 +3,9 @@ import pickle
 import sklearn
 import numpy as np
 
-
+#app id: laptopprice-395105
 app=Flask(__name__)
 
-#defining the prediction function
 def prediction(lst):
     filepath='laptop/predictor.pickle'
     with open(filepath, 'rb') as file:
@@ -15,7 +14,15 @@ def prediction(lst):
     pred= model.predict([lst])
     return pred
 
-@app.route("/", methods=['POST','GET'])
+@app.route('/',methods=['GET'])
+def home_page():
+    return render_template('home.html')
+
+@app.route('/style_transfer',methods=['POST','GET'])
+def home_style():
+    return render_template('style_transfer.html')
+
+@app.route('/laptop', methods=['POST','GET'])
 def home():
     pred=0
     if request.method =='POST':
@@ -30,9 +37,6 @@ def home():
         opsys=request.form['opsys']
         cpu=request.form['cpu']
         gpu=request.form['gpu']
-        
-
-
 
         feature_list=[]
         feature_list.append(int(ram))
@@ -68,7 +72,7 @@ def home():
         print("prediction", pred)
         print('fl', feature_list)
 
-    return render_template("index.html",pred=pred)
+    return render_template("laptop.html",pred=pred)
 
     
 if __name__=="__main__":
