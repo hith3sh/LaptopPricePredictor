@@ -78,7 +78,11 @@ body {
     background-position: 0% 44%;
   }
 }
-.wrapper {
+#home-link a {
+  color: white;
+}
+
+#wrapperId {
   max-width: 500px;
   width: 100%;
   background: #fff;
@@ -87,7 +91,7 @@ body {
   padding: 30px;
 }
 
-.wrapper .title {
+#titleId{
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 25px;

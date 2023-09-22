@@ -65,15 +65,15 @@ def home():
         traverse(cpu_list, cpu)
         traverse(gpu_list,gpu)
 
-        #print("featurelist:", feature_list)
         pred=prediction(feature_list)*353.54
         pred=np.round(pred[0])
 
         print("prediction", pred)
         print('fl', feature_list)
 
-    return render_template("laptop.html",pred=pred)
-
-    
+        return render_template("laptop.html",pred=pred)
+    else:
+        return render_template('laptop.html')
+ 
 if __name__=="__main__":
     app.run(debug=True)
